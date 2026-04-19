@@ -1,0 +1,37 @@
+# Datos
+sitio <- c("La Mixteca", "Tembladeras", "Sitio3", "Sitio4", "Sitio5", "Sitio6", "Sitio7", "Sitio8")
+individuos <- c(84, 54, 70, 65, 60, 58, 75, 68)
+
+# Crear dataframe
+centla <- data.frame(sitio, individuos)
+
+# Gráfica de barras
+barplot(centla$individuos,
+        names.arg = centla$sitio,
+        main = "Abundancia de Crocodylus moreletii (Pantanos de Centla)",
+        xlab = "Sitios",
+        ylab = "Número de individuos")
+
+# Datos
+habitat <- c("Manglar", "Laguna", "Canal")
+porcentaje <- c(50, 30, 20)
+
+sian <- data.frame(habitat, porcentaje)
+
+# Gráfica de pastel
+pie(sian$porcentaje,
+    labels = sian$habitat,
+    main = "Preferencia de hábitat de Crocodylus moreletii")
+
+# Datos
+tipo <- c("Ríos", "Lagunas")
+densidad <- c(1.11, 0.70)
+
+peten <- data.frame(tipo, densidad)
+
+# Gráfica de barras
+barplot(peten$densidad,
+        names.arg = peten$tipo,
+        main = "Densidad poblacional de Crocodylus moreletii en Petén",
+        xlab = "Tipo de hábitat",
+        ylab = "Cocodrilos por km")
